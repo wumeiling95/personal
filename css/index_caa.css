@@ -15,18 +15,19 @@ a{
     bottom: 0;
 }
 .bg_big .bg::before{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     z-index: 1000;
     content: ' ';
     background-color: rgba(79, 77, 77, 0.44);
+
 }
-.bg_big .bg::after{
-    content: '';
-    position: absolute;
-    z-index: 100;
-}
+/*.bg_big .bg::after{*/
+    /*content: '';*/
+    /*position: absolute;*/
+    /*z-index: 100;*/
+/*}*/
 .bg img{
     position: fixed;
     top: 0;
@@ -71,6 +72,7 @@ a{
 .text-center{
     position: relative;
     /*magin:0 auto;*/
+
 }
 .text-center h1{
     position: relative;
@@ -107,6 +109,16 @@ button{
     color:#FFFFFF;
     font-size: 50px;
     cursor: pointer;
+    z-index: 1000;
+    -webkit-animation: bounce 2s infinite ease-in-out;
+}
+@keyframes bounce {
+    0%, 20%, 60%, 100%  { -ms-transform: translateY(0); }
+    0%, 20%, 60%, 100%  { -o-transform: translateY(0); }
+    0%, 20%, 60%, 100%  { -moz-transform: translateY(0); }
+    0%, 20%, 60%, 100%  { -webkit-transform: translateY(0); }
+    40%  { -webkit-transform: translateY(-20px); }
+    80% { -webkit-transform: translateY(-10px); }
 }
 button::before{
     content: 'View Profile';
@@ -118,11 +130,11 @@ button::before{
 }
 
 /*right starts*/
-body .content .right{
+body .content .right_con{
     position:absolute;
     background-color: #fff;
     margin-left:40%;
-    height:100%;
+    height: 5000px;
     width:60%;
     top:0;
     z-index: 1003;
@@ -130,10 +142,88 @@ body .content .right{
 .profiles .introduce h1,span{
     padding: 40px;
     color: #333333;
-    z-index: 1005;
 }
-/*icon starts*/
+#per_ex {
+    margin: 10px 10px 10px 10px;
+}
+.per_ex .experent{
+    float: left;
+}
+.profiles .introduce h1{
+    font-size: 60px;
+}
+.space{
+    padding: 35px;
+}
+.space h3{
+    font-size: 40px;
+}
+.space p{
+    color: #333333;
+    opacity: 0.5;
+    font-size: 16px;
+}
+img{
+    float: left;
+}
+.photo{
+    display: block;
+}
+.experent{
+    margin: 5px;
+    position: relative;
+    left: 399px;
+    top: -481px;
+    width:350px;
+}
+@media (max-width: 1200px){
+    .experent{
+        top:0;
+        left: 10px;
+    }
+}
+@media (min-width: 200px){
+    .photo img{
+        text-align: center;
+    }
+}
 
+
+@media (max-width: 900px){
+    .col-lg-6 {
+        height:100%;
+    }
+}
+/*@media(max-width: 500px){*/
+    /*.bg_big{*/
+        /*width:0;*/
+    /*}*/
+    /*.logo_load{*/
+        /*width:0;*/
+    /*}*/
+    /*.big_tittle{*/
+        /*width:0;*/
+    /*}*/
+    /*.big_tittle{*/
+        /*width:0;*/
+    /*}*/
+/*}*/
+/*icon starts*/
+.icon-item i{
+    font-size: 50px;
+    color: #843534;
+    text-align: center;
+    display: block;
+    margin:0 auto;
+}
+.icon-item h5{
+    font-size: 16px;
+    text-align: center;
+    font-weight: bolder;
+}
+.icon-item p{
+    letter-spacing: 2px;
+}
 @font-face {font-family: "iconfont";
     src: url('../fonts/iconfont.eot?t=1521011589971'); /* IE9*/
     src: url('../fonts/iconfont.eot?t=1521011589971#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -144,7 +234,6 @@ body .content .right{
 
 .iconfont {
     font-family:"iconfont" !important;
-
     font-style:normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
