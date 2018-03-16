@@ -97,7 +97,7 @@ a{
 
 /*big_tittle end*/
 /*button  start*/
-button{
+.trigger{
     position: fixed;
     bottom: 40px;
     left: 47%;
@@ -187,9 +187,7 @@ img{
         text-align: center;
     }
 }
-
-
-@media (max-width: 900px){
+@media (max-width: 500px){
     .col-lg-6 {
         height:100%;
     }
@@ -224,6 +222,64 @@ img{
 .icon-item p{
     letter-spacing: 2px;
 }
+
+/*protfolio starts*/
+.work{
+    width: 60%;
+}
+.first figcaption{
+    width: 70%;
+    margin:0 auto;
+    text-align:center;
+    /*opacity:0;*/
+}
+.first{
+    margin:3px;
+}
+.first img{
+    width:100%;
+    height:100%;
+}
+figure{
+    width:48%;
+    float: left;
+}
+.work-bot a{
+    display: block;
+    text-align:center;
+    color: #f0f0f0;
+    font-size: 20px;
+}
+.view {
+    border: 0;
+    background: #419641;
+    border: none;
+    /*background: transparent;*/
+    color: #FFFFFF;
+    font-size: 30px;
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 5px;
+    box-shadow:#333333 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 200px){
+animation.photo img {
+    text-align: center;
+}
+}
+/*protfolio ends*/
 @font-face {font-family: "iconfont";
     src: url('../fonts/iconfont.eot?t=1521011589971'); /* IE9*/
     src: url('../fonts/iconfont.eot?t=1521011589971#iefix') format('embedded-opentype'), /* IE6-IE8 */
